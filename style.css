@@ -1,0 +1,137 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+.box{
+    border: 2px;
+    width: 500px;
+    height: 500px;
+    background-color: grey;
+    position: absolute;
+    top: 15.5%;
+    left: 35%;
+}
+
+.outer_circle{
+    border: 2px;
+    border-radius: 50%;
+    height: 350px;
+    width: 350px;
+    background-color: lightgray;
+    margin-top: 14%;
+    margin-left: 14.5%;
+    cursor: pointer;
+}
+
+.inner_circle{
+    border: 2px ;
+    border-radius: 50%;
+    width: 320px;
+    height: 320px;
+    background: linear-gradient(90deg, #4347a3 0%, #ce2e5f 100%);
+    position: absolute;
+    top: 17%;
+    left: 17.5%;
+    box-shadow: 5px 5px 10px inset #2e3080;  
+}
+
+.inner_cone{
+    border: 2px ;
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    background-color:lightgray;
+    border-radius: 0 0 130px 0;
+    transform: rotate(45deg);
+    top: 54%;
+    left: 21.9%;
+
+}
+
+.controller{
+    border: 2px;
+    height: 215px;
+    width: 215px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top : 16%;
+    left: 16%
+}
+
+.indicator{
+    position: absolute;
+    height: 15px;
+    width: 2px;
+    background-color: black;
+    top: 7%;
+    left: 50%;
+    transform: rotate(-90deg);
+    transform-origin: 0 100px;
+    transition: all 1s ease-in-out;
+}
+
+
+.outer_circle:hover .controller .indicator{
+    transform: rotate(70deg);
+
+
+}
+
+.weight{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100px;
+    color: #2e3080;
+    position: absolute;
+    top: 22%;
+    left: 26%;
+}
+
+.middleweight{
+    font-size: 20px;
+    color: #2e3080;
+    position: absolute;
+    top: 5%;
+    left: 45%;
+}
+
+.outer_circle:hover .controller .weight{
+    transform: translateX(-150px) scale(0.5);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.two{
+    opacity: 0;
+}
+
+.outer_circle:hover .controller .weight.two {
+    opacity: 1;
+    transform: translateX(0)
+}
+
+.units{
+    font-size: 20px;
+    position: absolute;
+    top: 75%;
+    left: 30%;
+}
+
+h3{
+    text-decoration: underline;
+    color: red; /* Ensure they are visible */
+    position: absolute; /* Change from absolute to relative */
+    top: 5%;
+    left: 5% /* Bring them above other content */
+}
+
+p{
+    position: absolute;
+    font-size: large;
+    color: black;
+    top: 5.25%;
+    left: 11%;
+}
